@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="shortcut icon" href="images/icon2.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#slider").on("click", "a", function (event) {
+                event.preventDefault();
+                var id = $(this).attr('href')
+                    , top = $(id).offset().top;
+                $('body,html').animate({
+                    scrollTop: top
+                }, 1500);
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("body").css("display", "none");
+            $("body").fadeIn(2000);
+            $("a.transition").click(function (event) {
+                event.preventDefault();
+                linkLocation = this.href;
+                $("body").fadeOut(1000, redirectPage);
+            });
+
+            function redirectPage() {
+                window.location = linkLocation;
+            }
+        });
+    </script>
+    <title>Міста Европи</title>
+</head>
+
+<body>
+    <header class="header">
+    <a class="transition" href="index.html">Головна</a>
+    <a class="transition" href="page/cities.html">Міста</a>
+	<a class="transition" href="page/feedback.html">Анкета</a>
+     </header>
+    <div class="intro"><div class="intro_text">Міста Європи</div></div>
+    <div class="ankor" id="slider">
+    <a href="#ancor" style="color: black; display: block;font-family: 'Century Gothic';">&#8595;</a></div>
+    <div class="content">
+        <h1 id="ancor" style="text-align: center;">Європа</h1>
+        <p>Європа з Азією складають континент Євразію, займає 8 % поверхні суходолу; площа Європи 10 532 000 км². Європа повністю лежить у північній півкулі між 36° пн. ш. і Північним Льодовитим океаном. Майже 2/3 території займає рівнина: від європейської частини Росії на сході (Східноєвропейська рівнина) до низинних територій на заході на узбережжі Біскайської затоки. У різні часи східну межу Європи проводили по-різному, простежується загальна тенденція «розростання Європи на схід». Останні три століття умовну межу між Європою і Азією на суходолі проводять вздовж східного підніжжя Уралу, по річці Ембі, Каспійському морю, Кумо-Маницькій западині (часто до Європи зараховують Кавказ), Чорному морю, протоці Босфор, Мармуровому морю, протоці Дарданелли, Егейському морю; Середземне море і Гібралтарська протока відокремлюють Європу від Африки. Поділ материка Євразія на частини світу Європу і Азію склався ще в Стародавній Греції. Античні греки виділяли три частини світу — Європу, Азію і Лівію (Африку). Межею між Європою і Азією вони вважали водні шляхи від Середземного до Азовського моря. Сучасні східні межі Європи (Урал) були встановлені за пропозицією шведського географа Філіпа Йогана фон Страленберга. Протяжність Європи в меридіональному напрямку — 4300 км, у широтному — 5000 км.</p>
+    </div>
+    <header>Для зв'язку : +(380)969192186 ; support_europe@gmail.com</header>
+</body>
+
+</html>

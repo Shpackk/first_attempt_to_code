@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="shortcut icon" href="../images/icon2.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/feedback.css">
+    <title>Опитування</title>
+</head>
+
+<body>
+    <header class="header"> <a class="transition" href="../index.html">Головна</a> <a class="transition" href="cities.html">Міста</a> <a class="transition" href="feedback.html">Анкета</a> </header>
+    <div class="feedback">
+        <form action="getForm.php" method="POST"> Ім'я :
+            <input type="text" required name="FirstName" maxlength="12" placeholder="Дмитрий"> Прізвище :
+            <input type="text" required name="LastName" maxlength="20" placeholder="Иванов">
+            <br>
+            <textarea name="comment" id="" cols="70" rows="15" placeholder="На що ви звертаете увагу при виборі місця подорожі..."></textarea>
+            <br> Вам був корисний наш сайт : Так
+            <input type="radio" name="vote"> Ні
+            <input type="radio" name="vote">
+            <br> Ви отримали бажану інформацію : Так
+            <input type="radio" name="vote1"> Ні
+            <input type="radio" name="vote1">
+            <br>
+            <input type="submit" name="submit" value="Надіслати"> </form>
+    </div>
+    <footer></footer>
+</body>
+
+</html>
